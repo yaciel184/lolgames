@@ -1,1 +1,18 @@
-<iframe src="https://fnaf1.io/fnaf-10"></iframe>
+<html>
+<head>
+    <title>Games</title>
+    <script>
+        function openGame() {
+            document.getElementById('gameIframe').src = 'https://fnaf1.io/fnaf-10';
+        }
+    </script>
+</head>
+<body>
+    <h1>Game Collection</h1>
+    <button onclick="openGame()">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNvASYlo5EZq7vf78DaPnOeNhhgENiv1125pRLuEsv7w&s" alt="FNaF Icon" style="width: 30px; height: 30px; vertical-align: middle;">
+        Play Five Nights at Freddy's
+    </button>
+    <iframe id="gameIframe" style="width: 100%; height: 500px;"></iframe>
+</body>
+</html>
