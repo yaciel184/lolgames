@@ -2,17 +2,33 @@
 <head>
     <title>Games</title>
     <script>
-        function openGame() {
-            document.getElementById('gameIframe').src = 'https://fnaf1.io/fnaf-10';
+        // Change the iframe's source based on the game selected
+        function openGame(url) {
+            document.getElementById('gameIframe').src = url;
         }
     </script>
 </head>
 <body>
     <h1>Game Collection</h1>
-    <button onclick="openGame()">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNvASYlo5EZq7vf78DaPnOeNhhgENiv1125pRLuEsv7w&s" alt="FNaF Icon" style="width: 30px; height: 30px; vertical-align: middle;">
-        Play Five Nights at Freddy's
-    </button>
-    <iframe id="gameIframe" style="width: 100%; height: 500px;"></iframe>
+
+    <!-- Navigation Menu for Multiple Games -->
+    <div style="margin-bottom: 20px;">
+        <button onclick="openGame('https://fnaf1.io/fnaf-10')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNvASYlo5EZq7vf78DaPnOeNhhgENiv1125pRLuEsv7w&s" 
+                 alt="FNaF Icon" style="width: 30px; height: 30px; vertical-align: middle;">
+            Five Nights at Freddy's
+        </button>
+
+        <button onclick="openGame('https://example.com/game2')">
+            Game 2
+        </button>
+
+        <button onclick="openGame('https://example.com/game3')">
+            Game 3
+        </button>
+    </div>
+
+    <!-- Main Game Display -->
+    <iframe id="gameIframe" style="width: 100%; height: 500px; border: none;"></iframe>
 </body>
 </html>
