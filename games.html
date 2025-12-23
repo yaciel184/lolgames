@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games</title>
+</head>
+<body>
+    <button onclick="openGame()">Play Five Nights at Freddy's</button>
+
+    <script>
+        function openGame() {
+            const gameWindow = window.open('', '_blank', 'width=800,height=600');
+            if (gameWindow) {
+                gameWindow.document.write(`
+                    <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                        <meta charset="UTF-8">
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                        <title>Five Nights at Freddy's</title>
+                    </head>
+                    <body>
+                        <iframe src='https://example-fnaf.com' style='width:100%;height:100%;border:none;'></iframe>
+                    </body>
+                    </html>
+                `);
+                gameWindow.document.close();
+            }
+        }
+    </script>
+</body>
+</html>
