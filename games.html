@@ -7,24 +7,49 @@
             document.getElementById('gameIframe').src = url;
         }
     </script>
+    <style>
+        .game-button {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            vertical-align: top;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .game-button img {
+            width: 100%;
+            height: 50%;
+            object-fit: cover;
+        }
+
+        .game-button span {
+            display: block;
+            height: 50%;
+            line-height: 50px;
+            background-color: #f4f4f4;
+        }
+    </style>
 </head>
 <body>
     <h1>Game Collection</h1>
 
     <!-- Navigation Menu for Multiple Games -->
     <div style="margin-bottom: 20px;">
-        <button onclick="openGame('https://fnaf1.io/fnaf-10')">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNvASYlo5EZq7vf78DaPnOeNhhgENiv1125pRLuEsv7w&s" 
-                 alt="FNaF Icon" style="width: 30px; height: 30px; vertical-align: middle;">
-            Five Nights at Freddy's
+        <button class="game-button" onclick="openGame('https://fnaf1.io/fnaf-10')">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNvASYlo5EZq7vf78DaPnOeNhhgENiv1125pRLuEsv7w&s" alt="FNaF Icon">
+            <span>Five Nights at Freddy's</span>
         </button>
 
-        <button onclick="openGame('https://example.com/game2')">
-            Game 2
+        <button class="game-button" onclick="openGame('https://example.com/game2')">
+            <span>Game 2</span>
         </button>
 
-        <button onclick="openGame('https://example.com/game3')">
-            Game 3
+        <button class="game-button" onclick="openGame('https://example.com/game3')">
+            <span>Game 3</span>
         </button>
     </div>
 
